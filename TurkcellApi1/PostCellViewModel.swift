@@ -7,6 +7,12 @@
 
 import UIKit
 
-class PostCellViewModel: NSObject {
-
+class PostCellViewModel {
+    let title : String
+    let body : String
+    
+    init(title: String, body: String) {
+        self.title = title
+        self.body = body
+    }
 }

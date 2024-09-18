@@ -9,15 +9,20 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var lblPostTitle: UILabel!
+    @IBOutlet weak var lblPostBody: UILabel!
+    
+    func configure(cellViewModel : PostCellViewModel) {
+        lblPostTitle.text = cellViewModel.title
+        lblPostBody.text = cellViewModel.body
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
 
 }
